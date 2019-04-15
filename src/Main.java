@@ -29,7 +29,7 @@ public class Main {
             polices[i].setxPolicePosition(randomX,randomY);
         }
 
-        int randomChoose=0;
+        int randomChoose = 0;
         int xp;
         int yp;
         while(finish!=1){
@@ -57,13 +57,24 @@ public class Main {
                         g.setxPolicePosition(xp-1,yp);
                         break;
                     case (5):
-
+                        xp = g.getXPolicePosition();
+                        yp = g.getYPoliceposition();
+                        g.setxPolicePosition(xp+1,yp);
                         break;
                     case (6):
+                        xp = g.getXPolicePosition();
+                        yp = g.getYPoliceposition();
+                        g.setxPolicePosition(xp-1,yp-1);
                         break;
                     case (7):
+                        xp = g.getXPolicePosition();
+                        yp = g.getYPoliceposition();
+                        g.setxPolicePosition(xp,yp-1);
                         break;
                     case (8):
+                        xp = g.getXPolicePosition();
+                        yp = g.getYPoliceposition();
+                        g.setxPolicePosition(xp+1,yp-1);
                         break;
                 }
             }
