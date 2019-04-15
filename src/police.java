@@ -5,7 +5,21 @@ public class police {
     private int xGround;
     private int yGround;
     private String seen;
+    private String print;
+
+    public void setPrint(String j){
+        print = j;
+    }
+
+    public String getPrint(){
+        return print;
+    }
     Random rands = new Random();
+
+    public police(int xp,int yp){
+        x = xp;
+        y = yp;
+    }
     public void setGroundPosition(int x,int y){
         xGround = x;
         yGround = y;
@@ -32,7 +46,7 @@ public class police {
         int yp=0;
         switch (rand) {
             case (1):
-                if((x-1)>0 && (y+1) <= yGround){
+                if((x-1)>0 && (y+1) < yGround){
                 x = x-1;
                 y = y+1;
                 }else{
@@ -49,7 +63,7 @@ public class police {
                 }
                 break;
             case (3):
-                if((x+1)<=xGround && (y+1)<=yGround){
+                if((x+1)<xGround && (y+1)<yGround){
                 x = x+1;
                 y = y+1;}
                 else{
@@ -66,7 +80,7 @@ public class police {
                 }
                 break;
             case (5):
-                if((x+1)<=xGround){
+                if((x+1)<xGround){
                 x = x+1;}
                 else{
                     rand = rands.nextInt(9);
@@ -91,7 +105,7 @@ public class police {
                 }
                 break;
             case (8):
-                if((x+1)<=xGround && (y-1)>=0){
+                if((x+1)<xGround && (y-1)>=0){
                 x = x+1;
                 y = y-1;
                 }

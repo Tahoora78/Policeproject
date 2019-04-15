@@ -48,7 +48,7 @@ public class Thief {
                     y = y+1;
                 }else{
                     rand = rands.nextInt(9);
-                    movePolice(rand);
+                    moveThief(rand);
                 }
                 break;
             case (2):
@@ -56,7 +56,7 @@ public class Thief {
                     y = y+1;}
                 else{
                     rand = rands.nextInt(9);
-                    movePolice(rand);
+                    moveThief(rand);
                 }
                 break;
             case (3):
@@ -65,7 +65,7 @@ public class Thief {
                     y = y+1;}
                 else{
                     rand = rands.nextInt(9);
-                    movePolice(rand);
+                    moveThief(rand);
                 }
                 break;
             case (4):
@@ -73,7 +73,7 @@ public class Thief {
                     x = x-1;}
                 else{
                     rand = rands.nextInt(9);
-                    movePolice(rand);
+                    moveThief(rand);
                 }
                 break;
             case (5):
@@ -81,7 +81,7 @@ public class Thief {
                     x = x+1;}
                 else{
                     rand = rands.nextInt(9);
-                    movePolice(rand);
+                    moveThief(rand);
                 }
                 break;
             case (6):
@@ -90,7 +90,7 @@ public class Thief {
                     y = y-1;}
                 else{
                     rand = rands.nextInt(9);
-                    movePolice(rand);
+                    moveThief(rand);
                 }
                 break;
             case (7):
@@ -98,7 +98,7 @@ public class Thief {
                     y = y-1;}
                 else{
                     rand = rands.nextInt(9);
-                    movePolice(rand);
+                    moveThief(rand);
                 }
                 break;
             case (8):
@@ -108,7 +108,7 @@ public class Thief {
                 }
                 else{
                     rand = rands.nextInt(9);
-                    movePolice(rand);
+                    moveThief(rand);
                 }
                 break;
         }
