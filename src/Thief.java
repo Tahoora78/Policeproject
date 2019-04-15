@@ -38,7 +38,7 @@ public class Thief {
         return get;
     }
 
-    public void movePolice(int rand){
+    public void moveThief(int rand){
         int xp=0;
         int yp=0;
         switch (rand) {

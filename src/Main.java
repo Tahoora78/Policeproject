@@ -33,10 +33,18 @@ public class Main {
         int xp;
         int yp;
         while(finish!=1){
+            randomChoose = rand.nextInt(9);
+            thief.moveThief(randomChoose);
             for(police g:polices) {
                 randomChoose = rand.nextInt(9);
+                g.movePolice(randomChoose);
+                if(g.getXPolicePosition()-thief.getXThiefPosition()<=2){
+
+                }
+            }
+
+
         }
 
 
-    }
 }}
