@@ -34,8 +34,14 @@ public class Ground {
     int randomX = rand.nextInt(xGround );
     int randomY = rand.nextInt(yGround);
         System.out.println("x:"+randomX+"y:"+randomY);
-     thief.setxGround(randomX);
-     thief.setyGround(randomY);
+     thief.setxGround(xGround);
+     thief.setyGround(yGround);
+     thief.setThiefPosition(randomX,randomY);
+
+     for(police h:polices){
+         h.thiefInPolice.setThiefPosition(randomX,randomY);
+     }
+
     }
 
     public void police() {
@@ -91,12 +97,15 @@ public class Ground {
             randomChoose = rand.nextInt(9);
             System.out.println("randomchoose"+randomChoose);
             thief.moveThief(randomChoose);
+            for(police f:polices){
+                f.thiefInPolice.setThiefPosition(thief.getXThiefPosition(),thief.getYThiefposition());
+            }
             for (police g : polices) {
                 randomChoose = rand.nextInt(9);
                 if (g.getXPolicePosition() - thief.getXThiefPosition() <= 2) {
 
                 }
-                g.movePolice(randomChoose);
+                g.movePolice1(randomChoose);
             }
             finish = 1;
         }
