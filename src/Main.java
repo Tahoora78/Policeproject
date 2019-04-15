@@ -35,50 +35,8 @@ public class Main {
         while(finish!=1){
             for(police g:polices) {
                 randomChoose = rand.nextInt(9);
-                switch (randomChoose) {
-                    case (1):
-                        xp = g.getXPolicePosition();
-                        yp = g.getYPoliceposition();
-                        g.setxPolicePosition(xp-1,yp+1);
-                        break;
-                    case (2):
-                        xp = g.getXPolicePosition();
-                        yp = g.getYPoliceposition();
-                        g.setxPolicePosition(xp,yp+1);
-                        break;
-                    case (3):
-                        xp = g.getXPolicePosition();
-                        yp = g.getYPoliceposition();
-                        g.setxPolicePosition(xp+1,yp+1);
-                        break;
-                    case (4):
-                        xp = g.getXPolicePosition();
-                        yp = g.getYPoliceposition();
-                        g.setxPolicePosition(xp-1,yp);
-                        break;
-                    case (5):
-                        xp = g.getXPolicePosition();
-                        yp = g.getYPoliceposition();
-                        g.setxPolicePosition(xp+1,yp);
-                        break;
-                    case (6):
-                        xp = g.getXPolicePosition();
-                        yp = g.getYPoliceposition();
-                        g.setxPolicePosition(xp-1,yp-1);
-                        break;
-                    case (7):
-                        xp = g.getXPolicePosition();
-                        yp = g.getYPoliceposition();
-                        g.setxPolicePosition(xp,yp-1);
-                        break;
-                    case (8):
-                        xp = g.getXPolicePosition();
-                        yp = g.getYPoliceposition();
-                        g.setxPolicePosition(xp+1,yp-1);
-                        break;
-                }
-            }
         }
 
+
     }
-}
+}}
