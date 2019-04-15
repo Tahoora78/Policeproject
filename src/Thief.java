@@ -25,4 +25,40 @@ public class Thief {
     public String getGet(){
         return get;
     }
+
+    public void moveThief(int rand){
+        int xp=0;
+        int yp=0;
+        switch (rand) {
+            case (1):
+                x = x-1;
+                y = y+1;
+                break;
+            case (2):
+                y = y+1;
+                break;
+            case (3):
+                x = x+1;
+                y = y+1;
+                break;
+            case (4):
+                x = x-1;
+                break;
+            case (5):
+                x = x+1;
+                break;
+            case (6):
+                x = x-1;
+                y = y-1;
+                break;
+            case (7):
+                y = y-1;
+                break;
+            case (8):
+                x = x+1;
+                y = y-1;
+                break;
+        }
+    }
+
 }
