@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -71,9 +72,11 @@ public class Ground {
         }
     }
 
+
     public void display(){
         int print =0;
         int time=0;
+        for (int i = 0; i < 30; ++i) System.out.println();
         for(police g:polices){
             g.setPrint("no");
         }
@@ -106,7 +109,12 @@ public class Ground {
             time=0;
             System.out.println();
         }
-        System.out.println("_________________________________________");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+       // System.out.println("_________________________________________");
     }
 
     public void start(){
@@ -126,7 +134,7 @@ public class Ground {
 
             for(police h:polices){
                 if(h.getXPolicePosition()==thief.getXThiefPosition() && h.getYPoliceposition()==thief.getYThiefposition()){
-             //       System.out.println("finish");
+                 //   System.out.println("finish");
                     finish = 1;
                     break;
                 }
@@ -159,8 +167,8 @@ public class Ground {
             if(finish==1){
                 break;
             }
-            display();
 
+            display();
             //finish = 1;
         }
 
