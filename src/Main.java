@@ -13,10 +13,10 @@ public class Main {
 
         Ground ground  = new Ground(x,y);
         ground.setPoliceNumber(policeNumber);
-        ground.thief();
         ground.police();
+        ground.thief();
         ground.display();
         ground.start();
-        ground.display();
+        //ground.display();
     }
 }

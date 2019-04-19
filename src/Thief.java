@@ -42,72 +42,72 @@ public class Thief {
         int xp=0;
         int yp=0;
         switch (rand) {
-            case (1):
-                if((x-1)>0 && (y+1) <= yGround){
+            case (0):
+                if((x-1)>0 && (y+1) < yGround){
                     x = x-1;
                     y = y+1;
                 }else{
-                    rand = rands.nextInt(9);
+                    rand = rands.nextInt(8);
+                    moveThief(rand);
+                }
+                break;
+            case (1):
+                if((y+1)<yGround){
+                    y = y+1;}
+                else{
+                    rand = rands.nextInt(8);
                     moveThief(rand);
                 }
                 break;
             case (2):
-                if((y+1)<=yGround){
+                if((x+1)<xGround && (y+1)<yGround){
+                    x = x+1;
                     y = y+1;}
                 else{
-                    rand = rands.nextInt(9);
+                    rand = rands.nextInt(8);
                     moveThief(rand);
                 }
                 break;
             case (3):
-                if((x+1)<=xGround && (y+1)<=yGround){
-                    x = x+1;
-                    y = y+1;}
+                if((x-1)>=0){
+                    x = x-1;}
                 else{
-                    rand = rands.nextInt(9);
+                    rand = rands.nextInt(8);
                     moveThief(rand);
                 }
                 break;
             case (4):
-                if((x-1)>=0){
-                    x = x-1;}
+                if((x+1)<xGround){
+                    x = x+1;}
                 else{
-                    rand = rands.nextInt(9);
+                    rand = rands.nextInt(8);
                     moveThief(rand);
                 }
                 break;
             case (5):
-                if((x+1)<=xGround){
-                    x = x+1;}
-                else{
-                    rand = rands.nextInt(9);
-                    moveThief(rand);
-                }
-                break;
-            case (6):
                 if((x-1)>=0 && (y-1)>=0){
                     x = x-1;
                     y = y-1;}
                 else{
-                    rand = rands.nextInt(9);
+                    rand = rands.nextInt(8);
+                    moveThief(rand);
+                }
+                break;
+            case (6):
+                if((y-1)>=0){
+                    y = y-1;}
+                else{
+                    rand = rands.nextInt(8);
                     moveThief(rand);
                 }
                 break;
             case (7):
-                if((y-1)>=0){
-                    y = y-1;}
-                else{
-                    rand = rands.nextInt(9);
-                    moveThief(rand);
-                }
-                break;
-            case (8):
-                if((x+1)<=xGround && (y-1)>=0){
+                if((x+1)<xGround && (y-1)>=0){
                     x = x+1;
                     y = y-1;
                 }
                 else{
-                    rand = rands.nextInt(9);
+                    rand = rands.nextInt(8);
                     moveThief(rand);
                 }
                 break;
