@@ -34,22 +34,16 @@ public class Ground {
     public void thief(){
     int randomX = rand.nextInt(xGround );
     int randomY = rand.nextInt(yGround);
-     //   System.out.println("x+"+randomX+"+y:"+randomY);
-       // System.out.println("1x:"+thief.getXThiefPosition()+"y:"+thief.getYThiefposition());
      thief.setxGround(xGround);
      thief.setyGround(yGround);
      thief.setThiefPosition(randomX,randomY);
      for(police t: polices){
          while(randomX == t.getXPolicePosition() && randomY == t.getYPoliceposition()){
-           //  System.out.println("xx:"+t.getXPolicePosition()+"yy:"+t.getYPoliceposition());
              randomX = rand.nextInt(xGround );
              randomY = rand.nextInt(yGround);
              thief.setThiefPosition(randomX,randomY);
-         //    System.out.println("************************");
          }
      }
-       // System.out.println("2x:"+thief.getXThiefPosition()+"y:"+thief.getYThiefposition());
-     //thief.setThiefPosition(randomX,randomY);
      for(police h:polices){
          h.thiefInPolice.setThiefPosition(thief.getXThiefPosition(),thief.getYThiefposition());
      }
@@ -63,9 +57,7 @@ public class Ground {
         police g=null;
         for (int i = 0; i < y; i++) {
             int randomX = rand.nextInt(xGround);
-           // System.out.println("randomx"+randomX);
             int randomY = rand.nextInt(y);
-            //System.out.println("randomy"+randomY);
             System.out.println("i"+i);
              g = new police(randomX,randomY);
             polices.add(g);
@@ -81,9 +73,7 @@ public class Ground {
             g.setPrint("no");
         }
         for(police g:polices){
-          //  System.out.println("$x:"+g.getXPolicePosition()+"y:"+g.getYPoliceposition());
         }
-        //System.out.println("dx:"+thief.getXThiefPosition()+"dy:"+thief.getYThiefposition());
         for(int j=0;j<yGround;j++){
             for(int i=0;i<xGround;i++){
                 for(police o:polices){
@@ -114,7 +104,6 @@ public class Ground {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-       // System.out.println("_________________________________________");
     }
 
     public void start(){
@@ -125,7 +114,6 @@ public class Ground {
     int finish=0;
         while(finish!=1) {
             randomChoose = rand.nextInt(8);
-            //System.out.println("randomchoose"+randomChoose);
             thief.moveThief(randomChoose);
             for(police f:polices){
                 f.setGroundPosition(xGround,yGround);
@@ -134,7 +122,6 @@ public class Ground {
 
             for(police h:polices){
                 if(h.getXPolicePosition()==thief.getXThiefPosition() && h.getYPoliceposition()==thief.getYThiefposition()){
-                 //   System.out.println("finish");
                     finish = 1;
                     break;
                 }
@@ -146,19 +133,14 @@ public class Ground {
                 randomChoose = rand.nextInt(8);
                 if (g.getXPolicePosition() - thief.getXThiefPosition() <= 2 ){
                     whichMove ++;
-               //     System.out.println("lLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
                 }
 
                 if(whichMove!=0){
-                 //   System.out.println("2222222222222222222222222");
                     g.movepolice2(randomChoose);
                 }
                 if(whichMove==0){
-                   // System.out.println("1111111111111111111111");
                     g.movePolice1(randomChoose);
                 }
-                //display();
-              //  System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
             if(g.getXPolicePosition()==thief.getXThiefPosition() && g.getYPoliceposition()==thief.getYThiefposition() || (thief.getXThiefPosition()== g.getXPolicePosition() && thief.getYThiefposition()==g.getYPoliceposition())){
             finish = 1;
             break;
@@ -169,7 +151,6 @@ public class Ground {
             }
 
             display();
-            //finish = 1;
         }
 
     }
